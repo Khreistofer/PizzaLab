@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pizzalabapp.controllers.HomeController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="703.0" style="-fx-background-color: #5457a6;">
+         <children>
+            <Label alignment="CENTER" prefHeight="63.0" prefWidth="703.0" text="Build Your Pizza Now" textFill="#eebb55">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <HBox prefHeight="212.0" prefWidth="703.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="212.0" prefWidth="377.0" spacing="50.0" style="-fx-border-width: 5px; -fx-border-radius: 5px; -fx-border-color: #eebb55;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="23.0" prefWidth="302.0" text="Pizza Size" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="53.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../img/sizes.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Impact" size="18.0" />
+                           </font></Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="352.0" style="-fx-padding: 10px;">
+                           <children>
+                              <RadioButton fx:id="small" mnemonicParsing="false" prefHeight="17.0" prefWidth="80.0" selected="true" text="Small" textFill="WHITE">
+                                 <font>
+                                    <Font name="Impact" size="12.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="sizeGroup" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="medium" layoutX="42.0" layoutY="36.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="94.0" text="Medium" textFill="WHITE" toggleGroup="$sizeGroup">
+                                 <font>
+                                    <Font name="Impact" size="12.0" />
+                                 </font></RadioButton>
+                              <RadioButton fx:id="large" layoutX="72.0" layoutY="36.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="75.0" text="Large" textFill="WHITE" toggleGroup="$sizeGroup">
+                                 <font>
+                                    <Font name="Impact" size="12.0" />
+                                 </font></RadioButton>
+                              <RadioButton fx:id="family" layoutX="179.0" layoutY="36.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="71.0" text="Family" textFill="WHITE" toggleGroup="$sizeGroup">
+                                 <font>
+                                    <Font name="Impact" size="12.0" />
+                                 </font></RadioButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="352.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="108.0" text="  Number Of Pizzas" textFill="WHITE">
+                                 <font>
+                                    <Font name="Impact" size="14.0" />
+                                 </font></Label>
+                              <TextField fx:id="numPizzas" prefHeight="25.0" prefWidth="191.0" text="1" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="212.0" prefWidth="377.0" spacing="40.0" style="-fx-border-width: 5px; -fx-border-radius: 5px; -fx-border-color: #eebb55;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="8.0" prefWidth="302.0" text="Toppings" textFill="WHITE">
+                           <font>
+                              <Font name="Impact" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="47.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../img/toppings-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="143.0" prefWidth="342.0">
+                           <children>
+                              <VBox prefHeight="143.0" prefWidth="168.0" spacing="10.0">
+                                 <children>
+                                    <CheckBox fx:id="cheese" mnemonicParsing="false" text="Cheese" textFill="WHITE">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></CheckBox>
+                                    <CheckBox fx:id="pepperonis" mnemonicParsing="false" text="Pepperonis" textFill="WHITE">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></CheckBox>
+                                    <CheckBox fx:id="mushrooms" mnemonicParsing="false" text="Mushrooms" textFill="WHITE">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></CheckBox>
+                                    <CheckBox fx:id="olives" mnemonicParsing="false" text="Olives" textFill="WHITE">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></CheckBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="143.0" prefWidth="177.0" spacing="10.0">
+                                 <children>
+                                    <CheckBox fx:id="tomatoes" mnemonicParsing="false" text="Tomatoes" textFill="WHITE">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></CheckBox>
+                                    <CheckBox fx:id="onions" mnemonicParsing="false" text="Onions" textFill="WHITE">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></CheckBox>
+                                    <CheckBox fx:id="sausages" mnemonicParsing="false" text="Sausages" textFill="WHITE">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></CheckBox>
+                                    <CheckBox fx:id="pineapples" mnemonicParsing="false" text="Pineapples" textFill="WHITE">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></CheckBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="92.0" prefHeight="251.0" prefWidth="703.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="212.0" prefWidth="377.0" spacing="30.0" style="-fx-border-width: 5px; -fx-border-radius: 5px; -fx-border-color: #eebb55;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="23.0" prefWidth="302.0" text="Drinks" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="48.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../img/drinks-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Impact" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="130.0" prefWidth="302.0" spacing="20.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                 <children>
+                                    <RadioButton fx:id="pepsi" mnemonicParsing="false" selected="true" text="Pepsi" textFill="WHITE">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="drinksGroup" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="sevenUp" mnemonicParsing="false" text="Seven Up" textFill="WHITE" toggleGroup="$drinksGroup">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></RadioButton>
+                                    <RadioButton fx:id="miranda" mnemonicParsing="false" text="MIranda" textFill="WHITE" toggleGroup="$drinksGroup">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></RadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                 <children>
+                                    <RadioButton fx:id="iceTea" mnemonicParsing="false" text="Ice Tea" textFill="WHITE" toggleGroup="$drinksGroup">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></RadioButton>
+                                    <RadioButton fx:id="energyDrink" mnemonicParsing="false" text="Enery Drink" textFill="WHITE" toggleGroup="$drinksGroup">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></RadioButton>
+                                    <RadioButton fx:id="juice" mnemonicParsing="false" text="Juice" textFill="WHITE" toggleGroup="$drinksGroup">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></RadioButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="352.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="108.0" text="  Number Of Drinks" textFill="WHITE">
+                                 <font>
+                                    <Font name="Impact" size="14.0" />
+                                 </font></Label>
+                              <TextField fx:id="numDrinks" prefHeight="25.0" prefWidth="191.0" text="0" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="212.0" prefWidth="377.0" spacing="30.0" style="-fx-border-width: 5px; -fx-border-radius: 5px; -fx-border-color: #eebb55;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="23.0" prefWidth="302.0" text="Dippings" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="46.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../img/dippings-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Impact" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="130.0" prefWidth="302.0" spacing="20.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                 <children>
+                                    <RadioButton fx:id="bbq" mnemonicParsing="false" selected="true" text="BBQ" textFill="WHITE">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="dipsGroup" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="garlic" mnemonicParsing="false" text="Garlic" textFill="WHITE" toggleGroup="$dipsGroup">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></RadioButton>
+                                    <RadioButton fx:id="ranch" mnemonicParsing="false" text="Ranch" textFill="WHITE" toggleGroup="$dipsGroup">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></RadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                 <children>
+                                    <RadioButton fx:id="buffalo" mnemonicParsing="false" text="Buffalo" textFill="WHITE" toggleGroup="$dipsGroup">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></RadioButton>
+                                    <RadioButton fx:id="marinara" mnemonicParsing="false" text="Marinara" textFill="WHITE" toggleGroup="$dipsGroup">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></RadioButton>
+                                    <RadioButton fx:id="ketchup" mnemonicParsing="false" text="Ketchup" textFill="WHITE" toggleGroup="$dipsGroup">
+                                       <font>
+                                          <Font name="Impact" size="12.0" />
+                                       </font></RadioButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="352.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="108.0" text="  Number Of Dips" textFill="WHITE">
+                                 <font>
+                                    <Font name="Impact" size="14.0" />
+                                 </font></Label>
+                              <TextField fx:id="numDips" prefHeight="25.0" prefWidth="191.0" text="0" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="63.0" prefWidth="703.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#onAddToReceiptClicked" prefHeight="15.0" prefWidth="230.0" styleClass="addOrderBtn" stylesheets="@stylesheet.css" text="Add to Receipt" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="703.0" layoutY="-1.0" prefHeight="600.0" prefWidth="302.0">
+         <children>
+            <Label alignment="CENTER" layoutX="86.0" layoutY="15.0" prefHeight="25.0" prefWidth="130.0" text="Receipt" textFill="#5457a6">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="16.0" layoutY="536.0" prefHeight="57.0" prefWidth="265.0" spacing="30.0">
+               <children>
+                  <Button fx:id="confirm" mnemonicParsing="false" onMouseClicked="#onConfirmClicked" styleClass="homeBtn" stylesheets="@stylesheet.css" text="Confirm" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button mnemonicParsing="false" onMouseClicked="#onClearClicked" prefHeight="25.0" prefWidth="57.0" styleClass="homeBtn" stylesheets="@stylesheet.css" text="Clear" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button mnemonicParsing="false" onMouseClicked="#onExitClicked" prefHeight="25.0" prefWidth="53.0" styleClass="homeBtn" stylesheets="@stylesheet.css" text="Exit" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <TextArea fx:id="receipt" editable="false" layoutX="21.0" layoutY="53.0" prefHeight="477.0" prefWidth="258.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

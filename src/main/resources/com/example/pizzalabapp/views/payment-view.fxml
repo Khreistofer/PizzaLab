@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pizzalabapp.controllers.PaymentController">
+   <children>
+      <VBox layoutY="-2.0" prefHeight="406.0" prefWidth="600.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="90.0" prefWidth="600.0" style="-fx-background-color: #5457a6;" text="Checkout" textFill="#eebb55">
+               <font>
+                  <Font name="Impact" size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="87.0" prefWidth="608.0" text="Choose Payment Method :" textFill="#545454">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="113.0" prefWidth="600.0" spacing="30.0">
+               <children>
+                  <Button fx:id="creditCardBtn" mnemonicParsing="false" onMouseClicked="#onCreditCardBtnClicked" prefHeight="39.0" prefWidth="169.0" styleClass="loginBtn" stylesheets="@stylesheet.css" text="Credit Card">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="paypalBtn" layoutX="226.0" layoutY="47.0" mnemonicParsing="false" onMouseClicked="#onPayPalBtnClicked" prefHeight="39.0" prefWidth="169.0" styleClass="loginBtn" stylesheets="@stylesheet.css" text="PayPal">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="onDeliveryBtn" layoutX="330.0" layoutY="47.0" mnemonicParsing="false" onMouseClicked="#onOnDeliveryClicked" prefHeight="39.0" prefWidth="169.0" styleClass="loginBtn" stylesheets="@stylesheet.css" text="On Delivery">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Label fx:id="checkoutText" alignment="CENTER" prefHeight="77.0" prefWidth="629.0" textFill="#545454">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="113.0" prefWidth="600.0" spacing="200.0">
+               <children>
+                  <Button fx:id="confirmPayment" mnemonicParsing="false" onMouseClicked="#onConfirmPaymentBtnClicked" prefHeight="56.0" prefWidth="434.0" styleClass="loginBtn" stylesheets="@stylesheet.css" text="Confirm Payment Method">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
